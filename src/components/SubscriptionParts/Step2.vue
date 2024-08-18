@@ -19,7 +19,7 @@
       <!-- Plans -->
       <div v-for="(plan, index) in plans" :key="index" class="col-12 col-xl plan mt-3 p-0">
         <label :for="plan.name" class="plan-label"></label>
-        <input class="plan-input" type="radio" :id="plan.name" :value="plan.name"
+        <input class="plan-input" type="radio" :id="plan.name" :value="plan.name" v-on:click="nextStep()"
           :checked="currentPlan === plan.name" />
         <div class="plan-content card ps-2">
           <div class="plan-icon mt-1">
